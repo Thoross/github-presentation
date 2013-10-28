@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Starve & Learn - GitHub</title>
+		<meta name="description" content="Presentation on how to leverage Git/GitHub">
+		<meta name="author" content="Chris Legault">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section>
+          <h1>Starve & Learn</h1>
+          <h2>GitHub Edition</h2>
+        </section>
+        <section>
+          <h2>Overview</h2>
+          <ul>
+            <li>What is Git?</li>
+            <li>Try Git</li>
+            <li>Git/GitHub Strategies</li>
+            <li>GitHub Features</li>
+            <li>Try GitHub</li>
+            <li>Best Practices</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2>What is Git?</h2>
+            <ul>
+              <li>Distributed Version Control</li>
+              <li>Collaboration</li>
+              <li>Advocates rapid branching and merging</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Distributed Version Control</h2>
+            <img src="images/distributed_version_control.png" />
+          </section>
+          <section>
+            <h2>Distributed Version Control</h2>
+            <ul>
+              <li>Cloning a project gives you a full copy (commits, history, etc...)</li>
+              <li>This makes it reliable</li>
+              <li>And fast!</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Collaboration</h2>
+            <ul>
+              <li>Through remote repositories</li>
+              <li>Through visual tools (GitHub)</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Try Git</h2>
+            <a href="https://www.codeschool.com/courses/try-git" target="_blank">
+              <img src="images/try_git.gif" />
+            </a>
+          </section>
+          <section>
+            <h2>Installing Git</h2>
+            <ul>
+              <li>Windows - <a href="http://msysgit.github.io/" target="_blank">Installer</a> (Beware the whitelisting!)</li>
+              <li>
+                Mac - <a href="http://code.google.com/p/git-osx-installer" target="_blank">Installer</a>
+                or through <a href="http://brew.sh/" target="_blank">Homebrew</a>
+              </li>
+              <li>Linux - apt-get install git
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Git/GitHub Strategies</h1>
+          </section>
+          <section>
+            <h2>Gatekeeper</h2>
+            <ul>
+              <li>Individual/small group manages the repository</li>
+              <li>Fork the project</li>
+              <li>Make branch, commit code</li>
+              <li>Send pull request</li>
+              <li>Gatekeeper approves or rejects</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Our Approach</h2>
+            <ul>
+              <li>Everyone has read/write access</li>
+              <li>Make a branch, commit code</li>
+              <li>Send pull request</li>
+              <li>Another user reviews and approves or rejects</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>GitHub Features</h2>
+          <ul>
+            <li><a href="http://pages.github.com/" target="_blank">GitHub Pages</a></li>
+            <li><a href="https://github.com/features/projects/wikis" target="_blank">Wiki</a></li>
+            <li><a href="https://github.com/features/projects/issues" target="_blank">Issue Tracking</a> &
+              <a href="https://github.com/features/projects/codereview" target="_blank">Code Review</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Try GitHub (on our own)</h2>
+        </section>
+        <section>
+          <h2>Best Practices</h2>
+          <ul>
+            <li>Branch often</li>
+            <li>Stay in sync with master</li>
+            <li>Be weary of the automatic merge</li>
+          </ul>
+
+        </section>
+        <section>
+          <h1>The End!</h1>
+          <h3>Go eat!</h3>
+        </section>
+      </div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
